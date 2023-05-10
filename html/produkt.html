@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bildegalleri</title>
+  <link rel="icon" type="image/x-icon" href="../media/favicon.ico">
+  <link rel="stylesheet" href="../css/produkt.css">
+</head>
+<body>
+  <header>
+      <h1>Vedfirma</h1>
+      <p>Din pålitelige kilde for kvalitetsved</p>
+  </header>
+  <nav>
+      <ul>
+        <li><a href="../index.html">Hjem</a></li>
+        <li><a href="omoss.html">Om oss</a></li>
+        <li><a href="produkt.html">Produkter</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+        <li><a href="chat.html">Chat</a></li>
+        <li><a href="../svelte/vedkalkulator.svelte">Vedkalkulator</a></li>
+      </ul>
+  </nav>
+  <div class="image-container">
+    <h2>Her kan du se på produktene våre!</h2>
+    <img id="gallery-image" src="#" alt="">
+    <p id="image-description"></p>
+    <div>
+      <button id="prev-btn">Forrige</button>
+      <button id="next-btn">Neste</button>
+    </div>
+  </div>
+  <script>
+  const images = [
+    { src: '../media/download.jpg', description: 'Den billigste veden vi har ervervet er furuved' },
+    { src: '../media/download1.jpg', description: 'Bjørkeved har en høy energikonsentrasjon' },
+    { src: '../media/download2.jpg', description: 'Vanlig ved, den vi selger mest av' },
+    { src: '../media/bundle.jpg', description: 'Fattig bunt' },
+  ];
+  let currentIndex = 0;
+  const galleryImage = document.getElementById('gallery-image');
+  const imageDescription = document.getElementById('image-description');
+  const prevBtn = document.getElementById('prev-btn');
+  const nextBtn = document.getElementById('next-btn');
+  function updateImage() {
+    galleryImage.src = images[currentIndex].src;
+    galleryImage.alt = `Bilde ${currentIndex + 1}`;
+    imageDescription.innerText = images[currentIndex].description;
+  }
+  prevBtn.addEventListener('click', () => {
+    currentIndex--;
+    if (currentIndex < 0) {
+      currentIndex = images.length - 1;
+    }
+    updateImage();
+  });
+  
+  nextBtn.addEventListener('click', () => {
+    currentIndex++;
+    if (currentIndex >= images.length) {
+      currentIndex = 0;
+    }
+    updateImage();
+  });
+  updateImage();
+  </script>  
+</body>
+</html>

@@ -1,0 +1,78 @@
+nav {
+    background-color: #ccc;
+    padding: 10px;
+    text-align: center;
+}
+nav ul {
+    display: inline-block;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+nav li {
+    display: inline-block;
+    margin: 0 10px;
+}
+nav a {
+    color: #333;
+    text-decoration: none;
+    padding: 5px;
+}
+body {
+    background-image: url('../media/forest.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+h1 {
+    font-size: 3em;
+    margin: 0;
+}
+.chat-container {
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    text-align: center;
+}
+.chat-container form {
+    margin-bottom: 20px;
+}
+.chat-container input {
+    padding: 5px 10px;
+    margin-right: 10px;
+}
+.chat-container button {
+    background-color: #ccc;
+    color: #333;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.chat-container button:hover {
+    background-color: #bbb;
+}
+.chat-container ol {
+    padding: 0;
+    list-style-type: none;
+}
+.chat-container li {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #ccc;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    text-align: left;
+}
+.chat-container i {
+    font-style: italic;
+    color: #333;
+}
