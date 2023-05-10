@@ -33,10 +33,12 @@ body {
           text-align: justify;
       }
   img {
-    max-width: 100%;
-    height: auto;
+    height: 500px; /* You can adjust this value to your needs */
+    width: 100%;
+    object-fit: cover;
     margin-bottom: 10px;
   }
+  
   button {
     background-color: #ccc;
     color: #333;
