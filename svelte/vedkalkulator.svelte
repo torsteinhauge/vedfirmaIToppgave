@@ -125,6 +125,25 @@
     .input-wrapper input {
       margin-left: 0.5rem;
     }
+    /* Bredde */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* banen */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* hendelen */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* hendel når du hovre over */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
   </style>
   <body>
     <header>
