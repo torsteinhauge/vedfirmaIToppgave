@@ -76,7 +76,7 @@ p {
 }
 
 .blog-post img {
-    width: 100%;
+    width: 300px;
     height: auto;
     margin-bottom: 10px;
     border: 1px solid #ccc;
